@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 
     }
    $sql = "SELECT personID, people.gradyr, people.first, people.last, c1.title as choice1, c2.title as choice2, c3.title as choice3 FROM enrollchoices JOIN people ON enrollchoices.`personID` = people.id LEFT JOIN classes c1 ON enrollchoices.first = c1.classID LEFT JOIN classes c2 ON enrollchoices.second = c2.classID LEFT JOIN classes c3 ON enrollchoices.third = c3.classID WHERE enrollchoices.personID = $idnum";
-$result = $conn->query($sql);
+    $result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 		echo "You've already registered. Thanks.";
 		return;
