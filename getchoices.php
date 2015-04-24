@@ -5,11 +5,11 @@
 <?php
     
 $idnum = $_POST["ID"];
-$servername = "172.16.1.145";
-//$servername = "10.0.1.66";
-$username = "pi";
-$password = "raspberry";
-$dbname = "PIRATE_TERM";
+// Uncomment the following for lines and update to appropriate values
+//$servername = "<server ip>";
+//$username = "<db user>";
+//$password = "<db password>";
+//$dbname = "<db name>";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
